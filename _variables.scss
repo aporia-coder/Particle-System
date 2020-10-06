@@ -1,0 +1,21 @@
+$pink: rgb(235, 52, 113);
+$nav-height: 4rem;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCenterCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flexStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
