@@ -63,10 +63,19 @@ p {
   line-height: 1.2rem;
 }
 
+.intro {
+  opacity: 0;
+}
+
+.btn-welcome {
+  opacity: 0;
+}
+
 .about {
-  height: calc(100vh + $nav-height);
+  // height: calc(100vh + $nav-height);
+  height: 100vh;
   width: 100%;
-  background-color: #fff;
+  background-color: rgb(245, 245, 245);
   z-index: -1;
   &-container {
     display: grid;
@@ -76,24 +85,35 @@ p {
     padding: 3rem;
   }
   &-text {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 16px 4px rgba(145, 145, 145, 1);
     padding: 1rem;
+  }
+  &-right {
+    @include flexCenterCol;
+  }
+}
+
+.skills {
+  img {
+    height: 5rem;
+    width: 5rem;
   }
 }
 
 .profileimg {
-  height: 5rem;
-  width: 100%;
-  border-radius: 100%;
-  border: 2px solid blue;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  border: 2px solid $pink;
+  position: relative;
 }
 
 .projects {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: #f0f0f0;
+  background-color: #fff;
   &-container {
     top: 0;
     left: 0;

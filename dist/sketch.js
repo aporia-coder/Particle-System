@@ -10,10 +10,6 @@ let colors = [
   [38, 98, 163],
 ];
 
-function preload() {
-  mont = loadFont("../assets/Montserrat-Thin.ttf");
-}
-
 function windowResized() {
   resizeCanvas(window.innerWidth, window.innerHeight);
 }
@@ -23,15 +19,8 @@ function setup() {
   canvas.parent("sketch-holder");
   w = window.innerWidth;
   h = window.innerHeight;
-  textFont(mont);
   for (let i = 0; i < width / 10; i++) {
     pars.push(new Particle());
-  }
-}
-
-class Text {
-  constructor() {
-    this.textSize(50);
   }
 }
 
@@ -87,24 +76,4 @@ function draw() {
     // particle.glow(particle);
     particle.lines(pars.slice(index));
   });
-  textAlign(CENTER, CENTER);
-  textSize(width / 30);
-  fill(255, 255, 255);
-  // text(`Hi, I'm Zachary Gray`, window.innerWidth / 2, window.innerHeight / 2);
-  // text(
-  //   "A Software developer based in the UK",
-  //   window.innerWidth / 2,
-  //   window.innerHeight / 2 + window.innerHeight / 10,
-  // );
-  // push();
-  // stroke(colors[1]);
-  // fill("rgb(255, 255, 255");
-  // rectMode(CENTER);
-  // rect(
-  //   window.innerWidth / 2,
-  //   window.innerHeight / 2 + window.innerHeight / 5,
-  //   160,
-  //   50,
-  // );
-  // pop();
 }
