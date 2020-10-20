@@ -16,3 +16,17 @@ tl.to(
   },
   "-=1",
 );
+
+const tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".divtest",
+    start: "bottom top",
+    scrub: 0.1,
+  },
+});
+
+tl2.from(".nav", {
+  y: "-110%",
+  duration: 0.3,
+  ease: "slow",
+});
