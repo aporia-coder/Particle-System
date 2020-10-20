@@ -1,6 +1,6 @@
 .nav {
   @include flexStart;
-  position: relative;
+  position: absolute;
   z-index: 1;
   width: 100%;
   height: 3rem;
@@ -8,6 +8,7 @@
   text-transform: uppercase;
   font-weight: 400;
   box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  transition: all 0.2s ease-in-out;
   &-list {
     display: flex;
     align-items: center;
@@ -23,6 +24,8 @@
 }
 
 .sticky {
+  transition: all 0.2s ease-in-out;
   top: 0;
+  transform: translateY($nav-height);
   position: fixed;
 }

@@ -39,9 +39,14 @@ class Particle {
     ellipse(this.pos.x, this.pos.y, 2);
   }
 
-  // glow(line) {
-  //   let d = dist(mouseX, mouseY, this.pos.x, this.pos.y);
-  // }
+  glow(pars) {
+    for (let par of pars) {
+      let d = dist(mouseX, mouseY, par.pos.x, par.pos.y);
+      if (d < 10) {
+        par.color.forEach((color) => (color += this.glow));
+      }
+    }
+  }
 
   move() {
     this.pos.add(this.vel);
@@ -73,7 +78,7 @@ function draw() {
     particle.show();
     particle.move();
     particle.hits();
-    // particle.glow(particle);
+    // particle.glow();
     particle.lines(pars.slice(index));
   });
 }
